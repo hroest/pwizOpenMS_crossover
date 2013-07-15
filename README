@@ -5,8 +5,14 @@ This code assumes that you have successfully built proteowizard and OpenMS.
 Tested on Linux so far.
 
 Please edit the CMakeLists.txt and add the paths to your pwiz build (this
-cannot be detected automatically by cmake yet).
+cannot be detected automatically by cmake yet). The relevant lines to change
+are:
 
-Next, configure cmake with -DOpenMS_DIR=/path/to/OpenMS/cmake
+set(PWIZ_BUILDNAME "build-linux-x86_64")
+set(PWIZ_MAKEDIR "/gcc-4.6/release/link-static/runtime-link-static/threading-multi/")
+
+Next, configure cmake with 
+ -DOpenMS_DIR=/path/to/OpenMS/cmake and 
+ -DPWIZ_MAINDIR=/path/to/pwiz_trunk/pwiz
 
 
