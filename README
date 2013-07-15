@@ -1,2 +1,12 @@
 
 Project that uses proteowizard and OpenMS.
+
+This code assumes that you have successfully built proteowizard and OpenMS.
+Tested on Linux so far.
+
+Please edit the CMakeLists.txt and add the paths to your pwiz build (this
+cannot be detected automatically by cmake yet).
+
+Next, configure cmake with -DOpenMS_DIR=/path/to/OpenMS/cmake
+
+
